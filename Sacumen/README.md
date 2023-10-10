@@ -51,24 +51,26 @@ configparser.write_config_to_json(config)
 #### Save configurations to a env file
 configparser.write_config_to_env_file(config)
 ###
-##Supported Formats
-YAML (.yaml)
+## Supported Formats
+YAML (.yaml),
 ConfigParser (.cfg, .conf)
 
 ###
-####Running Tests
+#### To Run all tests:
 
 coverage run -m pytest test_config_reader.py
 ###
-####To See Report:
+#### To see report:
 coverage report
 ###
-####To create report HTML:
+#### To create report HTML:
 
-coverage html , with **100 % code coverage**
+coverage html 
 ###
+#### Current code coverage status:
+ Using added test cases covered **100 % code coverage**
 
-##License
+## License
 
 @copyright (c) 2023 All right reserved.
 
