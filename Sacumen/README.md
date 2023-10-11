@@ -2,6 +2,12 @@
 
 A Python module for reading and write configuration files.
 
+## To run the application 
+
+python main.py
+
+
+
 ## Project Structure
 
  * [Sacumen]()
