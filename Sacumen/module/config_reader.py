@@ -29,9 +29,13 @@ class ConfigParser:
         elif ext == '.cfg' or ext == '.conf':
             config_parser = configparser.ConfigParser()
             config_parser.read(file_path)
-            for section in config_parser.sections():
-                config.update(dict(config_parser.items(section)))
 
+            for section in config_parser.sections():
+                for key, value in config_parser.items(section):
+                    nested_key = f"{section}.{key}"
+                    config[nested_key] = value
+
+        print(f"Final Config: {config}")
         self.write_config_to_json(config)
         self.write_config_to_env_file(config)
         self.write_config_to_env(config)
